@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>mauilib</RootNamespace>
+		<TargetFrameworks>net6.0-android;net6.0</TargetFrameworks>
+		<UseMaui>true</UseMaui>
+		<SingleProject>true</SingleProject>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+
+</Project>
