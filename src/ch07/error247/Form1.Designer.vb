@@ -22,69 +22,46 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.label2 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.label1 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(11, 126)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(273, 134)
-        Me.TextBox2.TabIndex = 15
-        '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(11, 272)
+        Me.Button1.Location = New System.Drawing.Point(11, 63)
         Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(272, 61)
-        Me.Button1.TabIndex = 14
-        Me.Button1.Text = "ファイル全体を読み込む"
+        Me.Button1.Size = New System.Drawing.Size(261, 54)
+        Me.Button1.TabIndex = 20
+        Me.Button1.Text = "例外のテスト"
         Me.Button1.UseVisualStyleBackColor = True
-        '
-        'label2
-        '
-        Me.label2.AutoSize = True
-        Me.label2.Location = New System.Drawing.Point(11, 90)
-        Me.label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.label2.Name = "label2"
-        Me.label2.Size = New System.Drawing.Size(54, 20)
-        Me.label2.TabIndex = 13
-        Me.label2.Text = "内容："
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(11, 47)
+        Me.TextBox1.Location = New System.Drawing.Point(117, 19)
         Me.TextBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(280, 27)
-        Me.TextBox1.TabIndex = 12
-        Me.TextBox1.Text = "sample.txt"
+        Me.TextBox1.Size = New System.Drawing.Size(155, 27)
+        Me.TextBox1.TabIndex = 19
+        Me.TextBox1.Text = "ABC"
         '
         'label1
         '
         Me.label1.AutoSize = True
-        Me.label1.Location = New System.Drawing.Point(11, 14)
+        Me.label1.Location = New System.Drawing.Point(11, 19)
         Me.label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.label1.Name = "label1"
-        Me.label1.Size = New System.Drawing.Size(81, 20)
-        Me.label1.TabIndex = 11
-        Me.label1.Text = "ファイル名："
+        Me.label1.Size = New System.Drawing.Size(91, 20)
+        Me.label1.TabIndex = 18
+        Me.label1.Text = "入力した値："
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(303, 353)
-        Me.Controls.Add(Me.TextBox2)
+        Me.ClientSize = New System.Drawing.Size(286, 133)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.label2)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.label1)
         Me.Name = "Form1"
@@ -94,9 +71,7 @@ Partial Class Form1
 
     End Sub
 
-    Private WithEvents TextBox2 As TextBox
     Private WithEvents Button1 As Button
-    Private WithEvents label2 As Label
     Private WithEvents TextBox1 As TextBox
     Private WithEvents label1 As Label
 End Class
