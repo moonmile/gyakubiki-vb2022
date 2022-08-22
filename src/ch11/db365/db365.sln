@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32804.467
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "db365", "db365.vbproj", "{1BDDF04F-78CA-4059-AB20-2D6C5703A991}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1BDDF04F-78CA-4059-AB20-2D6C5703A991}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BDDF04F-78CA-4059-AB20-2D6C5703A991}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BDDF04F-78CA-4059-AB20-2D6C5703A991}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BDDF04F-78CA-4059-AB20-2D6C5703A991}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9DE9522C-6849-430B-BE1A-95009487C14C}
+	EndGlobalSection
+EndGlobal
