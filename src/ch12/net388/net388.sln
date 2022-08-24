@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32804.467
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "net388", "net388.vbproj", "{EC2EFF1A-F72A-41EF-B0FD-F185FF901367}"
+EndProject
+Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "netserver", "H:\gyakubiki-vb2022\src\ch12\netserver\netserver.vbproj", "{1ED22DEF-38DC-46C3-9DF2-3643B8372C76}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EC2EFF1A-F72A-41EF-B0FD-F185FF901367}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC2EFF1A-F72A-41EF-B0FD-F185FF901367}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC2EFF1A-F72A-41EF-B0FD-F185FF901367}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC2EFF1A-F72A-41EF-B0FD-F185FF901367}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1ED22DEF-38DC-46C3-9DF2-3643B8372C76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1ED22DEF-38DC-46C3-9DF2-3643B8372C76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1ED22DEF-38DC-46C3-9DF2-3643B8372C76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1ED22DEF-38DC-46C3-9DF2-3643B8372C76}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3C2E4C66-BBB2-4FC0-9EB9-5420B8909669}
+	EndGlobalSection
+EndGlobal

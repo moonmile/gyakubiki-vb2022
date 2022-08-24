@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "netserver": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:60211;http://localhost:60212"
+    }
+  }
+}
