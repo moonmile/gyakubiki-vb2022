@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32819.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "web426", "web426.vbproj", "{BAA3A5FD-AFC5-4423-B3CE-4777EA3A21A4}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "web426client", "..\web426client\web426client.vbproj", "{B4B6BFE2-CD34-44A7-B7BD-EA5500E2DD8C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BAA3A5FD-AFC5-4423-B3CE-4777EA3A21A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAA3A5FD-AFC5-4423-B3CE-4777EA3A21A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAA3A5FD-AFC5-4423-B3CE-4777EA3A21A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAA3A5FD-AFC5-4423-B3CE-4777EA3A21A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4B6BFE2-CD34-44A7-B7BD-EA5500E2DD8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4B6BFE2-CD34-44A7-B7BD-EA5500E2DD8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4B6BFE2-CD34-44A7-B7BD-EA5500E2DD8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4B6BFE2-CD34-44A7-B7BD-EA5500E2DD8C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A3425A09-2E95-46F5-A2A0-948593D49CC6}
+	EndGlobalSection
+EndGlobal
