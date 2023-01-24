@@ -4,7 +4,8 @@
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
         Dim g = PictureBox1.CreateGraphics()
         g.Clear(DefaultBackColor)
         ' 透過色を設定する
@@ -25,7 +26,8 @@
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) _
+        Handles Button2.Click
         Dim g = PictureBox1.CreateGraphics()
         g.Clear(DefaultBackColor)
         ' 透過色を設定しない
@@ -33,10 +35,10 @@
         ' 画像を描画する
         Dim image = My.Resources.book
         g.DrawImage(
-                image,
-                New Rectangle(0, 0, PictureBox1.Width, PictureBox1.Height),
-                0, 0, image.Width, image.Height,
-                GraphicsUnit.Pixel,
-                ia)
+            image,
+            New Rectangle(0, 0, PictureBox1.Width, PictureBox1.Height),
+            0, 0, image.Width, image.Height,
+            GraphicsUnit.Pixel,
+            ia)
     End Sub
 End Class

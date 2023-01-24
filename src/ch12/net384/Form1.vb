@@ -3,13 +3,14 @@ Imports System.Security.Policy
 Imports System.Text.Json
 
 Public Class Form1
-    Private Async Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Async Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
         Dim author = TextBox1.Text
         Dim Publisher = TextBox2.Text
         Dim item = New SearchItem With
         {
             .AuthorName = author,
-            .PublisherName = Publisher,
+            .PublisherName = Publisher
         }
 
         Dim cl As New HttpClient()

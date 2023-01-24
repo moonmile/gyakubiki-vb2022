@@ -23,13 +23,13 @@ Module Program
                         ' 3バイト以降: データ
                         Dim length = stream.ReadByte()
                         Dim type = stream.ReadByte()
-                        Dim data = New Byte(length) {}
+                        Dim data = New Byte(length - 1) {}
                         stream.Read(data, 0, length)
                         Console.WriteLine("Receive Data")
                         Console.WriteLine($"  Length: {length}")
                         Console.WriteLine($"  Type: {type}")
                         Console.WriteLine("  Data: " + BitConverter.ToString(data))
-                        If type = 0 Then
+                        If type = 1 Then
 
                             ' クライアントにデータを返す
                             Dim data2 = System.Text.Encoding.ASCII.GetBytes("HELLO")

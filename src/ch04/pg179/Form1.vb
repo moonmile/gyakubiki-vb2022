@@ -1,5 +1,6 @@
 ﻿Public Class Form1
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
         Dim p As New Person With {
             .Name = "マスダトモアキ",
             .Age = 53,
@@ -8,7 +9,8 @@
         Me.ShowPerson(p)
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) _
+        Handles Button2.Click
         Dim p As New SubPerson With {
             .Name = "マスダトモアキ",
             .Age = 53,

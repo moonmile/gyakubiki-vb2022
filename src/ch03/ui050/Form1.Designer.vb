@@ -58,6 +58,7 @@ Partial Class Form1
         '
         Me.TextBox2.Location = New System.Drawing.Point(24, 170)
         Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(9679)
         Me.TextBox2.Size = New System.Drawing.Size(326, 31)
         Me.TextBox2.TabIndex = 4
         '

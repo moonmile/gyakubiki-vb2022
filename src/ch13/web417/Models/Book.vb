@@ -17,7 +17,8 @@ Partial Public Class Book
 
     Public Property PublisherId As Integer?
     <DisplayName("価格")>
-    <Range(100, 9999, ErrorMessage:="{0}は{1}から{2}までの間で指定してください")>
+    <Range(100, 9999,
+           ErrorMessage:="{0}は{1}から{2}までの間で指定してください")>
     Public Property Price As Integer
 
     ' 関連テーブル

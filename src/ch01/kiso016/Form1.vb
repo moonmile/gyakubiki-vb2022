@@ -1,5 +1,6 @@
 ﻿Public Class Form1
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
         If CheckBox1.Checked = True Then
             ' チェックされているときの処理を書く
             MessageBox.Show("選択状態です")

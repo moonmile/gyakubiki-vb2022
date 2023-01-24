@@ -2,7 +2,8 @@
 
     Private dic As New Dictionary(Of String, ValueTuple(Of String, String))
 
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub Form1_Load(sender As Object, e As EventArgs) _
+        Handles MyBase.Load
         dic = New Dictionary(Of String, ValueTuple(Of String, String))()
         dic.Add("JP", ("Japan", "日本"))
         dic.Add("CN", ("China", "中国"))
@@ -16,7 +17,8 @@
         Next
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
         Dim key = TextBox1.Text
         If dic.ContainsKey(key) = True Then
             Dim item = dic(key)

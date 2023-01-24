@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="maui466.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Label Text="フォントの変更" />
+            <Label Text="01234ABCDあいうえお" 
+              FontFamily="OpenSansRegular" FontSize="20"/>
+            <Label Text="01234ABCDあいうえお" 
+              FontFamily="Mplus" FontSize="20" />
+            <Label Text="01234ABCDあいうえお" 
+              FontFamily="Noto"  FontSize="20" />
+            <Label Text="日本語　図鑑　写真" FontFamily="Noto-jp"  FontSize="30" />
+            <Label Text="簡体文　図鑑　写真" FontFamily="Noto-sc"  FontSize="30" />
+            <Label Text="繁体文　図鑑　写真" FontFamily="Noto-tc"  FontSize="30" />
+            
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

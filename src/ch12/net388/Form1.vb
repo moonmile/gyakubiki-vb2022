@@ -4,7 +4,8 @@ Imports System.Text.Json
 Imports System.Windows.Forms.Design.AxImporter
 
 Public Class Form1
-    Private Async Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Async Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
         Dim author = TextBox1.Text
         Dim publisher = TextBox2.Text
         Dim apikey = TextBox3.Text
@@ -26,8 +27,8 @@ Public Class Form1
             Return
         End If
         Json = Await response.Content.ReadAsStringAsync()
-            ' JSONの大文字小文字を区別せずにデシリアライズする
-            Dim options = New JsonSerializerOptions With
+        ' JSONの大文字小文字を区別せずにデシリアライズする
+        Dim options = New JsonSerializerOptions With
         {
             .PropertyNameCaseInsensitive = True
         }

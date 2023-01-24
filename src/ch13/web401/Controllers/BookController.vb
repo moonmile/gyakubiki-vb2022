@@ -1,7 +1,4 @@
-﻿Imports System.Security.Policy
-Imports System.Web.Mvc
-
-Namespace Controllers
+﻿Namespace Controllers
     Public Class BookController
         Inherits Controller
 
@@ -53,7 +50,7 @@ Namespace Controllers
             book.Author = authors.FirstOrDefault(Function(t) t.Id = book.AuthorId)
             book.Publisher = publishers.FirstOrDefault(Function(t) t.Id = book.PublisherId)
             ' モデルをビューに渡す
-            Return View(Book)
+            Return View(book)
         End Function
     End Class
 End Namespace

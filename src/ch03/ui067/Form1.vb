@@ -4,7 +4,8 @@
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
         PictureBox1.Image = Image.FromFile("とうもろこし.jpg")
         PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
 
@@ -15,7 +16,8 @@
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) _
+        Handles Button2.Click
         PictureBox1.Image = My.Resources.にんじん
         PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
 
@@ -26,7 +28,8 @@
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs) _
+        Handles Button3.Click
         PictureBox1.Image = Nothing
     End Sub
 End Class

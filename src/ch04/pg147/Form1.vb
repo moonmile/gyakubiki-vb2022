@@ -20,7 +20,8 @@
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
         ListBox1.Items.Clear()
         ListBox2.Items.Clear()
         ListBox1.Items.AddRange(slst1.ToArray())
@@ -34,7 +35,8 @@
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs) _
+        Handles Button3.Click
         Dim index = slst1.FindIndex(
             Function(t)
                 Return t = "東京"
@@ -55,7 +57,8 @@
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) _
+        Handles Button2.Click
         ListBox1.Items.Clear()
         ListBox2.Items.Clear()
         ListBox1.Items.AddRange(olst1.ToArray())
@@ -65,7 +68,8 @@
     End Sub
 
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+    Private Sub Button4_Click(sender As Object, e As EventArgs) _
+        Handles Button4.Click
         ' コピー元の要素を変更する
         Dim index = olst1.FindIndex(
             Function(t)

@@ -1,7 +1,8 @@
 ﻿Imports System.IO
 
 Public Class Form1
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub Form1_Load(sender As Object, e As EventArgs) _
+        Handles MyBase.Load
         ListView1.View = View.Details
         ListView1.Columns.Add("ファイル名", 200)
         ListView1.Columns.Add("サイズ", 100, HorizontalAlignment.Right)
@@ -9,7 +10,8 @@ Public Class Form1
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
         Dim Text = TextBox1.Text
         If Directory.Exists(Text) = False Then
             MessageBox.Show("指定したフォルダーが見つかりません")

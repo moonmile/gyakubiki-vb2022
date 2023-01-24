@@ -1,5 +1,6 @@
 ﻿Public Class Form1
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
         Dim i
         ' 行頭に「'」を記述すると、行全体がコメントになります
         i = 100 * 2 ' 行の途中からもコメントが書けます

@@ -4,9 +4,10 @@ Imports System.Text.Json
 Imports System.Windows.Forms.Design.AxImporter
 
 Public Class Form1
-    Private Async Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim author = textBox1.Text
-        Dim publisher = textBox2.Text
+    Private Async Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
+        Dim author = TextBox1.Text
+        Dim publisher = TextBox2.Text
         Dim item As New SearchItem With
         {
             .AuthorName = author,

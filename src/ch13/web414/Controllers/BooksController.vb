@@ -55,7 +55,11 @@ Namespace Controllers
             If IsNothing(id) Then
                 Return New HttpStatusCodeResult(HttpStatusCode.BadRequest)
             End If
-            Dim book As Book = db.Book.Find(id)
+            Dim book As Book = db.Book.
+                Include("Author").
+                Include("Publisher").
+                Where(Function(m) m.Id = id).
+                FirstOrDefault()
             If IsNothing(book) Then
                 Return HttpNotFound()
             End If

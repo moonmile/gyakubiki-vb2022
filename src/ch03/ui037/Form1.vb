@@ -4,7 +4,8 @@
         Label1.Text = FormBorderStyle.Fixed3D.ToString()
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) _
+        Handles Button2.Click
         FormBorderStyle = FormBorderStyle.FixedToolWindow
         Label1.Text = FormBorderStyle.FixedToolWindow.ToString()
     End Sub

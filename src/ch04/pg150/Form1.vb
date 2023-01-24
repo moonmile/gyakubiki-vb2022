@@ -2,7 +2,8 @@
 
     Private map As New Dictionary(Of String, String)
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
         Dim id = Integer.Parse(TextBox1.Text)
         Dim Name = TextBox2.Text
         ' キーと値を追加

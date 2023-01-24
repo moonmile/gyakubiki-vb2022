@@ -1,5 +1,6 @@
 ﻿Public Class Form1
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
         Dim lst As New List(Of Integer) From {
             1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
         Dim sum = lst.Sum()

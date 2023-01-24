@@ -2,7 +2,6 @@ Imports System
 Imports Microsoft.AspNetCore.Builder
 Imports Microsoft.Extensions.DependencyInjection
 Imports Microsoft.Extensions.Hosting
-Imports Microsoft.EntityFrameworkCore
 Imports Microsoft.Extensions.Configuration
 
 Module Program
@@ -12,12 +11,6 @@ Module Program
         builder.Services.AddEndpointsApiExplorer()
         builder.Services.AddSwaggerGen()
 
-        ' appsettings.json Ç©ÇÁê⁄ë±ï∂éöóÒÇéÊìæÇ∑ÇÈ
-        builder.Services.AddDbContext(Of ApplicationDbContext)(
-            Sub(options)
-                options.UseSqlServer(builder.Configuration.GetConnectionString("ApplicationDbContext"))
-            End Sub
-        )
 
         Dim app = builder.Build()
         If app.Environment.IsDevelopment() Then

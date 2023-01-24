@@ -60,7 +60,7 @@ Partial Class Form1
         'DockToolStripMenuItem
         '
         Me.DockToolStripMenuItem.Name = "DockToolStripMenuItem"
-        Me.DockToolStripMenuItem.Size = New System.Drawing.Size(270, 34)
+        Me.DockToolStripMenuItem.Size = New System.Drawing.Size(215, 34)
         Me.DockToolStripMenuItem.Text = "全体表示する"
         '
         'Form1

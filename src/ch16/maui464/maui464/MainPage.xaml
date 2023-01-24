@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="maui464.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+            <Label Text="テキスト入力" />
+            <Entry Text="{Binding Name}" Placeholder="名前" />
+            <Entry Text="{Binding Age}" Placeholder="年齢" />
+            <Entry Text="{Binding Address}" Placeholder="住所" />
+            <Button Text="入力" 
+                    Command="{Binding OnInputCommand}" />
+            <Label Text="{Binding Result}"/>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

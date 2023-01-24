@@ -4,19 +4,22 @@
         RadioButton1.Checked = True
     End Sub
 
-    Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged
+    Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) _
+        Handles RadioButton1.CheckedChanged
         label3.Text = "縦"
         label4.Text = "横"
         TextBox4.Visible = True
     End Sub
 
-    Private Sub RadioButton2_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton2.CheckedChanged
+    Private Sub RadioButton2_CheckedChanged(sender As Object, e As EventArgs) _
+        Handles RadioButton2.CheckedChanged
         label3.Text = "高さ"
         label4.Text = "底辺"
         TextBox4.Visible = True
     End Sub
 
-    Private Sub RadioButton3_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton3.CheckedChanged
+    Private Sub RadioButton3_CheckedChanged(sender As Object, e As EventArgs) _
+        Handles RadioButton3.CheckedChanged
         label3.Text = "半径"
         label4.Text = ""
         TextBox4.Visible = False
@@ -27,19 +30,20 @@
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
         Dim shape As IShape
         If RadioButton1.Checked = True Then
             shape = New Square() With {
                 .Height = Integer.Parse(TextBox3.Text),
                 .Width = Integer.Parse(TextBox4.Text)
             }
-        ElseIf radioButton2.Checked = True Then
+        ElseIf RadioButton2.Checked = True Then
             shape = New Triangle() With {
                .Height = Integer.Parse(TextBox3.Text),
                .Width = Integer.Parse(TextBox4.Text)
             }
-        ElseIf radioButton3.Checked = True Then
+        ElseIf RadioButton3.Checked = True Then
             shape = New Circle() With {
                 .Radius = Integer.Parse(TextBox3.Text)
             }
@@ -203,3 +207,4 @@ Public Class Circle
         End Get
     End Property
 End Class
+

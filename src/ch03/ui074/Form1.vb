@@ -7,7 +7,8 @@
 
     End Sub
 
-    Private Sub CenterToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CenterToolStripMenuItem.Click
+    Private Sub CenterToolStripMenuItem_Click(sender As Object, e As EventArgs) _
+        Handles CenterToolStripMenuItem.Click
         Dim tb As TextBox = ContextMenuStrip1.SourceControl
         If Not tb Is Nothing Then
             tb.TextAlign = HorizontalAlignment.Center

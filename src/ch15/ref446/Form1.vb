@@ -15,7 +15,8 @@
         .Address = "板橋区"
     }
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
         ' リフレクションで設定
         Dim pi = GetType(Sample).GetProperty("Name")
         Dim value As String = pi?.GetValue(_obj)

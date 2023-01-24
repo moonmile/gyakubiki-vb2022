@@ -23,7 +23,7 @@
                 <ColumnDefinition Width="350" />
             </Grid.ColumnDefinitions>
             <local:PersonControl
-                Item="{Binding PersonItem}"
+                Item="{Binding Person}"
                                  Grid.ColumnSpan="2">
             </local:PersonControl>
             <ListView 
@@ -75,5 +75,6 @@
                 Margin="2" />
         </Grid>
         <local:PersonControl HorizontalAlignment="Left" Margin="658,496,0,0" VerticalAlignment="Top"/>
+        <local:PersonControl HorizontalAlignment="Left" Margin="792,119,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

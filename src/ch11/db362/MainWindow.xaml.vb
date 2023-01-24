@@ -12,7 +12,7 @@ Class MainWindow
         Dim context As New MyContext()
         Dim q = From t In context.Person
                 Where t.Age <= age
-                Select t;
+                Select t
         dg.ItemsSource = q.ToList()
     End Sub
 End Class

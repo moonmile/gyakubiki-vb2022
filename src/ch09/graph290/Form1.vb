@@ -1,5 +1,6 @@
 ﻿Public Class Form1
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
         Dim Image = New Bitmap(My.Resources.book)
         Dim g = Graphics.FromImage(Image)
         ' 文字を入れる
@@ -12,7 +13,8 @@
         PictureBox1.Image = Image
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) _
+        Handles Button2.Click
         Dim Image = New Bitmap(PictureBox1.Image)
         Image.Save(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) +
                 $"\{DateTime.Now.ToString("yyyy-MM-dd")}.png",

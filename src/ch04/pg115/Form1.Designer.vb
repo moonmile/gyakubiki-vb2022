@@ -35,7 +35,7 @@ Partial Class Form1
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(354, 68)
         Me.Button2.TabIndex = 9
-        Me.Button2.Text = "Or 演算子"
+        Me.Button2.Text = "OrElse 演算子"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button1
@@ -44,7 +44,7 @@ Partial Class Form1
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(354, 68)
         Me.Button1.TabIndex = 8
-        Me.Button1.Text = "And 演算子"
+        Me.Button1.Text = "AndAlso 演算子"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Label1

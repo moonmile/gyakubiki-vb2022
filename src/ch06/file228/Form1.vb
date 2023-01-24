@@ -1,5 +1,6 @@
 ﻿Public Class Form1
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
         Dim fname = TextBox1.Text
         If System.IO.File.Exists(fname) = False Then
             MessageBox.Show("ファイルが見つかりません")
@@ -13,7 +14,8 @@
         ' sr.Close()
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) _
+        Handles Button2.Click
         Dim fname = TextBox1.Text
         If System.IO.File.Exists(fname) = False Then
             MessageBox.Show("ファイルが見つかりません")

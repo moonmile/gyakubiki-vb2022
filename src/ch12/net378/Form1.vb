@@ -7,7 +7,8 @@ Public Class Form1
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
-    Private Async Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Async Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
         Try
             Dim client As New HttpClient()
             Dim url = TextBox1.Text

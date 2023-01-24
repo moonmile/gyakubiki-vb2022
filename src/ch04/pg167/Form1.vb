@@ -6,7 +6,8 @@
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
         _obj = New Sample(TextBox1.Text)
         Label3.Text = _obj.Id
     End Sub
@@ -16,7 +17,8 @@
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) _
+        Handles Button2.Click
         If _obj Is Nothing Then Return
         _obj.Name = TextBox1.Text
         ' _obj.Id = "xxxxxx"    '' Id プロパティは変更できない
@@ -42,6 +44,7 @@ Public Class Sample
             Return _id
         End Get
     End Property
+
 
     ''' <summary>
     ''' 読み書きできるプロパティ

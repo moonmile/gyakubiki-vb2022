@@ -2,7 +2,8 @@
 
     Private Data As New ModifiedValue(Of String)()
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
         Dim names = {"増田智明", "ますだともあき", "マスダトモアキ"}
         Data.Value = names(Random.Shared.Next(names.Length))
         Label3.Text = $"{Data.Value} {Data.Modified.ToString()}"
@@ -12,7 +13,8 @@
     Private Name1 = "マスダ"
     Private Name2 = "トモアキ"
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) _
+        Handles Button2.Click
         ' 値を交換する
         Swap(Name1, Name2)
         Label4.Text = $"{Name1} <=> {Name2}"

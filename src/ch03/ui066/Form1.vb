@@ -4,7 +4,8 @@
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
         ListBox1.Items.Clear()
         For Each tab As TabPage In TabControl1.TabPages
             For Each btn As RadioButton In tab.Controls

@@ -12,5 +12,9 @@
             End If
         Next
         MessageBox.Show($"合計値: {sum}")
+
+#If MASUDA Then
+        Dim a = 10
+#End If
     End Sub
 End Class

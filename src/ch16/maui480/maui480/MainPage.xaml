@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="maui480.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Label 
+                Text="GPSの利用"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <Button 
+                Text="取得"
+                FontAttributes="Bold"
+                Command="{Binding OnClickedCommand}"
+                HorizontalOptions="Center" />
+
+            <Label Text="緯度：" />
+            <Label 
+                Text="{Binding Latitude, StringFormat='{0:0.000}'}"
+                FontSize="18"
+                HorizontalOptions="Center" />
+            <Label Text="経度：" />
+            <Label 
+                Text="{Binding Longitude, StringFormat='{0:0.000}'}"
+                FontSize="18"
+                HorizontalOptions="Center" />
+            <Label Text="高度：" />
+            <Label 
+                Text="{Binding Altitude, StringFormat='{0:0.000}'}"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

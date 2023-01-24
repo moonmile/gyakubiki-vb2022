@@ -20,7 +20,7 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-        <Button Content="国語" Margin="4" 
+        <Button Content="国語" Margin="4"
                 FontWeight="Bold"
                 Foreground="White"
                 Grid.Column="0" Grid.Row="0">

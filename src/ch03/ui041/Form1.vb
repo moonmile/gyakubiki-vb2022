@@ -4,7 +4,8 @@
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
         Dim form As New Form2 With {
             .StartPosition = FormStartPosition.Manual,
             .Location = New Point(0, 0)
@@ -17,7 +18,8 @@
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) _
+        Handles Button2.Click
         Dim form As New Form2 With {
             .StartPosition = FormStartPosition.CenterScreen
         }
@@ -29,7 +31,8 @@
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs) _
+        Handles Button3.Click
         Dim form As New Form2
         form.ShowDialog()
     End Sub
@@ -39,7 +42,8 @@
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+    Private Sub Button4_Click(sender As Object, e As EventArgs) _
+        Handles Button4.Click
         Dim form As New Form2 With {
             .StartPosition = FormStartPosition.WindowsDefaultBounds
         }
@@ -52,7 +56,8 @@
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+    Private Sub Button5_Click(sender As Object, e As EventArgs) _
+        Handles Button5.Click
         Dim form As New Form2 With {
             .StartPosition = FormStartPosition.CenterParent
         }

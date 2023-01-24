@@ -34,7 +34,7 @@ Partial Class Form1
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(345, 70)
         Me.Button2.TabIndex = 7
-        Me.Button2.Text = "foreach を使う"
+        Me.Button2.Text = "For Each を使う"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button1

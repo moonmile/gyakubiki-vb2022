@@ -27,7 +27,8 @@
         p.Address = address
     End Function
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
         Dim x = 10
         Dim y = 20
         Dim v = add(x, y)

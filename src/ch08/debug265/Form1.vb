@@ -1,5 +1,6 @@
 ﻿Public Class Form1
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
         Dim x = Integer.Parse(TextBox1.Text)
         Dim ans = sample(x)
         MessageBox.Show($"計算結果: {ans}")

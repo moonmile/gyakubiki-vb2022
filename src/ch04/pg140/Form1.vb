@@ -4,7 +4,8 @@
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
         ListBox1.Items.Clear()
         ListBox2.Items.Clear()
         Dim ary = {"東京", "神奈川", "埼玉", "千葉", "栃木", "群馬", "茨城"}
@@ -22,7 +23,8 @@
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) _
+        Handles Button2.Click
         ListBox1.Items.Clear()
         ListBox2.Items.Clear()
         Dim ary = {"東京", "神奈川", "埼玉", "千葉", "栃木", "群馬", "茨城"}

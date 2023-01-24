@@ -1,10 +1,12 @@
 ﻿Public Class Form1
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub Form1_Load(sender As Object, e As EventArgs) _
+        Handles MyBase.Load
         ' 14日間選択できる
         MonthCalendar1.MaxSelectionCount = 14
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
         Dim startDay = MonthCalendar1.SelectionStart
         Dim endDay = MonthCalendar1.SelectionEnd
         Dim days = endDay.Subtract(startDay).Days + 1

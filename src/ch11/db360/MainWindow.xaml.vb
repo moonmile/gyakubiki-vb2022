@@ -97,6 +97,10 @@ Public Class MyContext
             builder.InitialCatalog = "sampledb"
             builder.IntegratedSecurity = True
             optionsBuilder.UseSqlServer(builder.ConnectionString)
+            optionsBuilder.LogTo(
+                Sub(action)
+                    System.Diagnostics.Debug.WriteLine(action)
+                End Sub, Microsoft.Extensions.Logging.LogLevel.Information)
         End If
     End Sub
 End Class

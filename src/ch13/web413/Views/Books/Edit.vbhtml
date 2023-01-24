@@ -7,21 +7,28 @@ End Code
 
 @Using (Html.BeginForm())
     @Html.AntiForgeryToken()
-    
+
     @<div class="form-horizontal">
         <h4>Book</h4>
         <hr />
-        @Html.ValidationSummary(True, "", New With { .class = "text-danger" })
+        @Html.ValidationSummary(
+                         True, "", New With {.class = "text-danger"})
         @Html.HiddenFor(Function(model) model.Id)
-
         <div class="form-group">
-            @Html.LabelFor(Function(model) model.Title, htmlAttributes:= New With { .class = "control-label col-md-2" })
+            @Html.LabelFor(
+                         Function(model) model.Title,
+                         htmlAttributes:=New With {
+                         .class = "control-label col-md-2"})
             <div class="col-md-10">
-                @Html.EditorFor(Function(model) model.Title, New With { .htmlAttributes = New With { .class = "form-control" } })
-                @Html.ValidationMessageFor(Function(model) model.Title, "", New With { .class = "text-danger" })
+                @Html.EditorFor(
+                         Function(model) model.Title,
+                         New With {.htmlAttributes = New With {
+                         .class = "form-control"}})
+                @Html.ValidationMessageFor(
+                         Function(model) model.Title, "",
+                         New With {.class = "text-danger"})
             </div>
         </div>
-
         <div class="form-group">
             @Html.LabelFor(Function(model) model.AuthorId, htmlAttributes:= New With { .class = "control-label col-md-2" })
             <div class="col-md-10">

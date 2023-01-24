@@ -16,4 +16,9 @@ Partial Public Class Book
     Public Property PublisherId As Integer?
 
     Public Property Price As Integer
+
+    ' 関連テーブル
+    Public Property Author As Author
+    Public Property Publisher As Publisher
+
 End Class

@@ -1,7 +1,8 @@
 ﻿Imports System.Net.Http
 
 Public Class Form1
-    Private Async Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Async Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
         Dim client As New HttpClient()
         Try
             ' 指定URLのファイルをダウンロードする

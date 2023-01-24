@@ -8,7 +8,7 @@ Public Class Form1
 
     Private Async Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim id = Integer.Parse(TextBox1.Text)
-        Dim Url = $"https://localhost:7282/api/Stores/{id}"
+        Dim Url = $"https://localhost:5001/api/Stores/{id}"
         Dim cl As New HttpClient()
         Dim Json = Await cl.GetStringAsync(Url)
         _store = System.Text.Json.JsonSerializer.Deserialize(Of Store)(
@@ -26,12 +26,12 @@ Public Class Form1
     Private Async Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         If _store Is Nothing Then Return
 
-        Dim Url = $"https://localhost:7282/api/Stores/{_store.Id}"
+        Dim Url = $"https://localhost:5001/api/Stores/{_store.Id}"
         _store.Stock = Integer.Parse(TextBox2.Text)
         Dim cl As New HttpClient()
         Dim Json = System.Text.Json.JsonSerializer.Serialize(_store)
         Dim context = New StringContent(Json, System.Text.Encoding.UTF8, "application/json")
-        Dim response = Await cl.PostAsync(Url, context)
+        Dim response = Await cl.PutAsync(Url, context)
         If response.IsSuccessStatusCode Then
             MessageBox.Show("在庫数を変更しました")
         Else
@@ -46,9 +46,9 @@ End Class
 ''' </summary>
 Public Class Store
     <Key>
-    Public Id As Integer
-    Public BookId As Integer
-    Public Stock As Integer
-    Public CreatedAt As DateTime
-    Public UpdatedAt As DateTime
+    Public Property Id As Integer
+    Public Property BookId As Integer
+    Public Property Stock As Integer
+    Public Property CreatedAt As DateTime
+    Public Property UpdatedAt As DateTime
 End Class

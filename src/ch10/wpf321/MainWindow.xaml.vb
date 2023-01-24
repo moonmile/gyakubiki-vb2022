@@ -62,12 +62,12 @@ Public Class ViewModel
     Public Property SubmitCommand As DelegateCommand
     Public Sub New()
         SubmitCommand = New DelegateCommand(
-        Sub()
-            Message = $"{Name} さん、登録しました"
-        End Sub,
-        Function()
-            Return True
-        End Function)
+            Sub()
+                Message = $"{Name} さん、登録しました"
+            End Sub,
+            Function()
+                Return True
+            End Function)
     End Sub
 End Class
 

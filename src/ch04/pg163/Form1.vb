@@ -29,6 +29,13 @@
                         Return Math.Pow(x, y)
                     End Function
         End If
+
+
+        Dim fnc1 =
+            Function(x, y)
+                Return x + y
+            End Function
+
     End Sub
 
     ''' <summary>

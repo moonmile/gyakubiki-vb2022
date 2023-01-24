@@ -44,7 +44,7 @@ Partial Class Form1
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(354, 76)
         Me.Button1.TabIndex = 13
-        Me.Button1.Text = "参照渡し ref の利用"
+        Me.Button1.Text = "参照渡しの利用"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Label3

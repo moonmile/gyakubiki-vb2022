@@ -92,9 +92,9 @@ End Class
 Public Class ResultItem
     Public Property Id As Integer
     Public Property Title As String
-    Public AuthorName As String
-    Public PublisherName As String
-    Public Price As Integer
+    Public Property AuthorName As String
+    Public Property PublisherName As String
+    Public Property Price As Integer
 End Class
 
 

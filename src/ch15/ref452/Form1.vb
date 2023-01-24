@@ -7,7 +7,8 @@ Public Class Form1
         .Address = "板橋区"
         }
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
         TextBox1.Text = MyInvoke(_obj, "privateShowData", New Object())
     End Sub
 

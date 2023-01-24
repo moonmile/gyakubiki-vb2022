@@ -2,7 +2,8 @@
 Imports System.Security.Policy
 
 Public Class Form1
-    Private Async Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Async Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
         Dim cl As New HttpClient()
         Dim Url = $"http://localhost:5000/api/Gyakubiki/search"
         Dim dic = New Dictionary(Of String, String)()

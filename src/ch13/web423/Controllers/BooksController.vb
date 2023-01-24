@@ -15,7 +15,8 @@ Public Class BooksController
     <HttpGet>
     Public Async Function GetBook() As Task(Of IEnumerable(Of Book))
         ' JOIN を利用する
-        Dim items = Await _context.Book.Include("Author").
+        Dim items = Await _context.Book.
+            Include("Author").
             Include("Publisher").
             OrderBy(Function(t) t.Id).
             ToListAsync()
@@ -25,7 +26,11 @@ Public Class BooksController
     ' GET: api/Books/5
     <HttpGet("{id}")>
     Public Async Function GetBook(id As Integer) As Task(Of ActionResult(Of Book))
-        Dim Book = Await _context.Book.FindAsync(id)
+        Dim Book = Await _context.Book.
+        Include("Author").
+        Include("Publisher").
+        Where(Function(t) t.Id = id).
+        FirstOrDefaultAsync()
 
         If Book Is Nothing Then
             Return NotFound()

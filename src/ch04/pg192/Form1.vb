@@ -1,5 +1,6 @@
 ﻿Public Class Form1
-    Private Async Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Async Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
         ProgressBar1.Minimum = 0
         ProgressBar1.Maximum = 100
         ' 完了フラグ

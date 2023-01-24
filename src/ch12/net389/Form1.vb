@@ -7,7 +7,6 @@ Public Class Form1
     Private _cookie As CookieContainer
 
     Public Sub New()
-
         ' この呼び出しはデザイナーで必要です。
         InitializeComponent()
 
@@ -25,7 +24,8 @@ Public Class Form1
     End Sub
 
 
-    Private Async Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Async Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
         Dim id = Integer.Parse(TextBox1.Text)
         Dim url = $"http://localhost:5000/api/Gyakubiki/checkCookie"
         Dim response = Await _cl.GetStringAsync(url)

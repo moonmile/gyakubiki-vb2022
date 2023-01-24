@@ -20,7 +20,7 @@ Module Program
             ' サーバーからのデータを受信する
             Dim length2 = stream.ReadByte()
             Dim type2 = stream.ReadByte()
-            Dim data2 = New Byte(length2) {}
+            Dim data2 = New Byte(length2 - 1) {}
             stream.Read(data2, 0, length2)
             Console.WriteLine("Receive Data")
             Console.WriteLine($"  Length: {length2}")

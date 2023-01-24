@@ -22,7 +22,6 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -34,22 +33,13 @@ Partial Class Form1
         Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'ListBox1
-        '
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.ItemHeight = 25
-        Me.ListBox1.Location = New System.Drawing.Point(393, 66)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(354, 154)
-        Me.ListBox1.TabIndex = 28
-        '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(393, 242)
+        Me.Button2.Location = New System.Drawing.Point(21, 340)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(354, 79)
         Me.Button2.TabIndex = 27
-        Me.Button2.Text = "複数のレコードを使う"
+        Me.Button2.Text = "別モジュールの呼び出し"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Label7
@@ -121,15 +111,14 @@ Partial Class Form1
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(354, 79)
         Me.Button1.TabIndex = 19
-        Me.Button1.Text = "レコード型を使う"
+        Me.Button1.Text = "モジュールを使う"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(770, 347)
-        Me.Controls.Add(Me.ListBox1)
+        Me.ClientSize = New System.Drawing.Size(394, 443)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
@@ -145,8 +134,6 @@ Partial Class Form1
         Me.PerformLayout()
 
     End Sub
-
-    Private WithEvents ListBox1 As ListBox
     Private WithEvents Button2 As Button
     Private WithEvents Label7 As Label
     Private WithEvents Label6 As Label

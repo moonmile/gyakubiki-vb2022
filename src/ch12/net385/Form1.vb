@@ -4,17 +4,18 @@ Imports System.Security.Policy
 Imports System.Text.Json
 Imports System.Windows.Forms.Design.AxImporter
 Public Class Form1
-Private async Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        dim id = integer.Parse(textBox1.Text)
-        dim cl as new HttpClient()
-        dim url = $"http://localhost:5000/api/Gyakubiki/{id}"
-        dim response = await cl.GetStringAsync(url)
+    Private Async Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
+        Dim id = Integer.Parse(TextBox1.Text)
+        Dim cl As New HttpClient()
+        Dim url = $"http://localhost:5000/api/Gyakubiki/{id}"
+        Dim response = Await cl.GetStringAsync(url)
         ' JSONの大文字小文字を区別せずにデシリアライズする
-        dim options = new JsonSerializerOptions With
+        Dim options = New JsonSerializerOptions With
         {
-            .PropertyNameCaseInsensitive = true
+            .PropertyNameCaseInsensitive = True
         }
-        dim book = JsonSerializer.Deserialize( Of Book)(response, options)
+        Dim book = JsonSerializer.Deserialize(Of Book)(response, options)
         If Not book Is Nothing Then
             TextBox2.Text =
 $"書名：{book.Title} 

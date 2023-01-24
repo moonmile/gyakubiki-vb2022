@@ -1,5 +1,6 @@
 ﻿Public Class Form1
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
         Dim fname = TextBox1.Text
         If System.IO.Directory.Exists(fname) = True Then
             Label3.Text = $"フォルダー {fname} が見つかりました"

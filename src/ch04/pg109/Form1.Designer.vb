@@ -71,14 +71,14 @@ Partial Class Form1
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(354, 81)
         Me.Button1.TabIndex = 5
-        Me.Button1.Text = "dynamic型を使う"
+        Me.Button1.Text = "Object型を使う"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(378, 344)
+        Me.ClientSize = New System.Drawing.Size(378, 287)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.label2)

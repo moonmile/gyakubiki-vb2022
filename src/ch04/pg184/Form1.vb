@@ -1,10 +1,14 @@
 ﻿Public Class Form1
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-
+    Private Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
+        Dim obj = makeStruct("ますだともあき", 54, "いたばしく")
+        Label2.Text = obj.ToString()
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-
+    Private Sub Button2_Click(sender As Object, e As EventArgs) _
+        Handles Button2.Click
+        Dim obj = makeClass("増田智明", 54, "板橋区")
+        Label2.Text = obj.ToString()
     End Sub
 
     ''' <summary>
@@ -14,7 +18,8 @@
     ''' <param name="age"></param>
     ''' <param name="address"></param>
     ''' <returns></returns>
-    Function makeStruct(name As String, age As Integer, address As String) As SampleStruct
+    Function makeStruct(name As String, age As Integer, address As String) _
+        As SampleStruct
         Dim obj As SampleStruct
         obj.Name = name
         obj.Age = age
@@ -29,7 +34,8 @@
     ''' <param name="age"></param>
     ''' <param name="address"></param>
     ''' <returns></returns>
-    Function makeClass(name As String, age As Integer, address As String) As SampleClass
+    Function makeClass(name As String, age As Integer, address As String) _
+        As SampleClass
         Dim obj As New SampleClass
         obj.Name = name
         obj.Age = age

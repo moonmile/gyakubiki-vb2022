@@ -4,16 +4,18 @@
         Dim text = ""
         For i = 1 To 10
             text += "☺"
-            Me.Invoke(Sub()
-                             label.Text = text
-                         End Sub)
+            Me.Invoke(
+                Sub()
+                    label.Text = text
+                End Sub)
             ' 500msecまでランダムに待つ
             Await Task.Delay(Random.Shared.Next(500))
         Next
     End Function
 
 
-    Private Async Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Async Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
         Label11.Text = "開始 " + DateTime.Now.ToString()
         Await Task.Run(
             Sub()

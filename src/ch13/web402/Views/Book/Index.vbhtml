@@ -1,4 +1,5 @@
-﻿@ModelType Book
+﻿@Imports web402.Models
+@ModelType Book
 @Code
     ViewData("Title") = "Index"
 
@@ -21,7 +22,6 @@
                 .Name = "秀和システム"
         }
     }
-
 End Code
 
 <h1>モデルを参照する</h1>

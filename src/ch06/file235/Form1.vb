@@ -4,17 +4,18 @@
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
         Dim person As New Person With
             {
                 .Id = 100,
                 .Name = "マスダトモアキ",
                 .Age = 53,
-                .Address = "東京都",
+                .Address = "東京都"
             }
 
-        Dim path = TextBox1.Text;
-            Dim json = System.Text.Json.JsonSerializer.Serialize(person)
+        Dim path = TextBox1.Text
+        Dim json = System.Text.Json.JsonSerializer.Serialize(person)
         System.IO.File.WriteAllText(path, json)
         MessageBox.Show("JSON形式で書き出しました")
     End Sub
@@ -24,8 +25,9 @@
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Dim path = textBox1.Text
+    Private Sub Button2_Click(sender As Object, e As EventArgs) _
+        Handles Button2.Click
+        Dim path = TextBox1.Text
         Dim json = System.IO.File.ReadAllText(path)
         Dim person = System.Text.Json.JsonSerializer.Deserialize(Of Person)(json)
         MessageBox.Show("JSON形式を読み込みました" + vbCrLf +

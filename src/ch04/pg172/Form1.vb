@@ -1,5 +1,6 @@
 ﻿Public Class Form1
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
         ' 基本クラスの利用
         Dim obj As New Sample With {
             .Name = "マスダトモアキ",
@@ -11,7 +12,8 @@
         Label6.Text = obj.Address
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) _
+        Handles Button2.Click
         Dim obj As New SubSample With {
             .Name = "マスダトモアキ",
             .Age = 53,
@@ -72,9 +74,7 @@ Public Class SubSample
         address As String,
         telephone As String)
 
-        Me.Name = name
-        Me.Age = age
-        Me.Address = address
+        MyBase.New(name, age, address)
         Me.Telephone = telephone
     End Sub
 End Class

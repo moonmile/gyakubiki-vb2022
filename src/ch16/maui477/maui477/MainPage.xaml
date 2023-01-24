@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="maui477.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Label
+                Text="内部ブラウザで開く"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+
+            <Button
+                Text="開く"
+                Command="{Binding OnClickedCommand}"
+                HorizontalOptions="Center" />
+
+            <WebView Source="{Binding UrlSource}"
+                     HeightRequest="400"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

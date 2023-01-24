@@ -1,5 +1,6 @@
 ﻿Public Class Form1
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub Form1_Load(sender As Object, e As EventArgs) _
+        Handles MyBase.Load
         Dim dt = DateTime.Now
 
         Label3.Text = $"例:
@@ -10,7 +11,8 @@
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
         Dim dt As DateTime
         If DateTime.TryParse(TextBox1.Text, dt) = False Then
             Label2.Text = "日付が変換できませんでした"

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="maui460.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Label 
+                Text="{Binding Title}"
+                FontSize="40"
+                HorizontalTextAlignment="Center"/>
+            <Label 
+                Text="{Binding Publisher}"
+                HorizontalTextAlignment="Start"/>
+            <Label 
+            Text="{Binding Author}" 
+                HorizontalTextAlignment="End"/>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

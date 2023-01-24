@@ -14,7 +14,8 @@
         .Name = "マスダトモアキ",
         .Address = "板橋区"
     }
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
         ' リフレクションでメソッドを取得
         Dim mi = GetType(Sample).GetMethod("ShowData")
         Dim value As String = mi?.Invoke(_obj, New Object() {})

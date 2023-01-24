@@ -12,19 +12,19 @@ Public Class StoresController
     End Sub
 
     <HttpGet("{id}")>
-    Public Function GetItem(id As Integer?) As ActionResult
+    Public Function GetItem(id As Integer?) As ActionResult(Of Store)
         If id Is Nothing Then
             Return NotFound()
         End If
-        Dim store = _context.Store.FirstOrDefault(Function(m) m.Id = id)
+        Dim store = _context.Store.FirstOrDefault(Function(t) t.Id = id)
         If store Is Nothing Then
             Return NotFound()
         End If
         Return Ok(store)
     End Function
 
-    <HttpPost("{id}")>
-    Public Function Edit(id As Integer, <FromBody> store As Store) As ActionResult
+    <HttpPut("{id}")>
+    Public Function Edit(id As Integer, store As Store) As ActionResult
         If id <> store.Id Then
             Return NotFound()
         End If

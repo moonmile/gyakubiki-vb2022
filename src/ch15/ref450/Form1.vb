@@ -4,7 +4,8 @@ Imports System.ComponentModel.DataAnnotations.Schema
 Imports System.Reflection
 
 Public Class Form1
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
         ' メソッドの属性を取得
         Dim mi = GetType(Sample).GetMethod("ShowData")
         Dim attr = mi?.GetCustomAttribute(Of DisplayAttribute)()
@@ -25,6 +26,7 @@ Public Class Sample
     ''' プロパティの値を表示する
     ''' </summary>
     ''' <returns></returns>
+    <Display(Description:="フォーマットした文字列を取得する")>
     Public Function ShowData() As String
         Return $"{Id} : {Name} in {Address}"
     End Function

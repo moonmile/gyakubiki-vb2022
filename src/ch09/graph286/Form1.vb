@@ -2,7 +2,8 @@
 
     Private page As Integer = -1
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
         Dim g = PictureBox1.CreateGraphics()
         Dim image = My.Resources.cocks
         ' ページを進める
@@ -12,9 +13,11 @@
             page = 0
         End If
         Dim pt As New Point(0, page * 600)
-        g.DrawImage(image, New Rectangle(0, 0, PictureBox1.Width, PictureBox1.Height),
-                New RectangleF(0, page * 600, 800, 600), GraphicsUnit.Pixel)
-
+        g.DrawImage(image,
+            New Rectangle(0, 0,
+                PictureBox1.Width, PictureBox1.Height),
+            New RectangleF(0, page * 600, 800, 600),
+            GraphicsUnit.Pixel)
     End Sub
 
     Sub makeBitmap()

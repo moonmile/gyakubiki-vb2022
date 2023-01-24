@@ -1,19 +1,19 @@
-﻿Imports System.Net.Http
+﻿Imports System.IO
+Imports System.Net.Http
 Imports System.Security.Policy
 Imports System.Text.Json
+Imports System.Xml.Serialization
 
 Public Class Form1
-    Private Async Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Async Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
         Dim id = Integer.Parse(TextBox1.Text)
         Dim cl As New HttpClient()
         Dim url = $"http://localhost:5000/api/Gyakubiki/{id}/xml"
         Dim response = Await cl.GetStringAsync(url)
-        ' JSONの大文字小文字を区別せずにデシリアライズする
-        Dim options = New JsonSerializerOptions With
-        {
-            .PropertyNameCaseInsensitive = True
-        }
-        Dim book = JsonSerializer.Deserialize(Of Book)(response, options)
+        Dim serializer = New XmlSerializer(GetType(Book))
+        Dim sr As New StringReader(response)
+        Dim book As Book = serializer.Deserialize(sr)
         If Not book Is Nothing Then
             TextBox2.Text =
 $"書名：{book.Title} 
@@ -22,7 +22,6 @@ $"書名：{book.Title}
 価格：{book.Price} 
 "
         End If
-
     End Sub
 End Class
 

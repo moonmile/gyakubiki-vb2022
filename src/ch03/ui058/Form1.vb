@@ -1,10 +1,12 @@
 ﻿Public Class Form1
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub Form1_Load(sender As Object, e As EventArgs) _
+        Handles MyBase.Load
         RadioButton1.Checked = True
         RadioButton6.Checked = True
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
         Dim text1 = ""
         Dim text2 = ""
         For Each btn As RadioButton In groupBox1.Controls

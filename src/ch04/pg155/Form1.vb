@@ -3,7 +3,8 @@
     ' Cupオブジェクトの作成
     Private _cup As New Cup
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
         _cup.add(20)
         Label2.Text = $"Value is {_cup.Value}"
     End Sub

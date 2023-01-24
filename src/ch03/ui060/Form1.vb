@@ -1,5 +1,6 @@
 ﻿Public Class Form1
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub Form1_Load(sender As Object, e As EventArgs) _
+        Handles MyBase.Load
         ListBox1.Items.AddRange(
                 {"赤", "橙", "黄", "緑", "青", "藍", "紫"})
     End Sub
@@ -9,7 +10,8 @@
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
         ListBox1.Items.Clear()
         ListBox1.Items.AddRange(
                 {"赤", "橙", "黄", "緑", "青", "藍", "紫"})
@@ -21,7 +23,8 @@
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) _
+        Handles Button2.Click
         If ListBox1.Items.Count > 0 Then
             ListBox1.Items.RemoveAt(0)
         End If
@@ -32,7 +35,8 @@
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs) _
+        Handles Button3.Click
         If ListBox1.Items.Count > 0 Then
             ListBox1.Items.RemoveAt(ListBox1.Items.Count - 1)
         End If

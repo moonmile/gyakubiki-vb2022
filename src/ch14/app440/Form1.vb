@@ -2,7 +2,8 @@
 Imports Microsoft.Win32
 
 Public Class Form1
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
         Dim configFile = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None)
         Dim appSettings = configFile.AppSettings.Settings
         Dim key = TextBox1.Text

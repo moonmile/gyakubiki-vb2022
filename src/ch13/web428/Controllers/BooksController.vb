@@ -5,8 +5,10 @@
 Public Class BooksController
     Inherits ControllerBase
 
+    <Route("hello")>
+    <HttpGet>
     Public Function hello() As HelloResujlt
-        Dim apikey = Me.Response.Headers("X-API-KEY")
+        Dim apikey = Me.Request.Headers("X-API-KEY")
         If apikey.FirstOrDefault() <> "TEST-SERVER" Then
             Return New HelloResujlt With {
                 .ErrorMesssage = "apikey error."

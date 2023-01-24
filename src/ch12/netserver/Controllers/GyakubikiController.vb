@@ -29,7 +29,7 @@ Namespace Controllers
                 .Id = 1,
                 .AuthorId = 1,
                 .PublisherId = 1,
-                .Title = "逆引き大全C#2022",
+                .Title = "逆引き大全VB2022",
                 .Price = 1000
             })
             books.Add(New Book With
@@ -48,6 +48,14 @@ Namespace Controllers
                 .Title = ".NET6プログラミング入門",
                 .Price = 1000
             })
+            books.Add(New Book With
+            {
+                .Id = 4,
+                .AuthorId = 4,
+                .PublisherId = 3,
+                .Title = "完全プログラム言語の探求",
+                .Price = 1000
+            })
             authors = New List(Of Author)()
             authors.Add(New Author With {.Id = 1, .Name = "増田智明"})
             authors.Add(New Author With {.Id = 2, .Name = "トム・デマルコ"})
@@ -56,6 +64,7 @@ Namespace Controllers
             publishers = New List(Of Publisher)()
             publishers.Add(New Publisher With {.Id = 1, .Name = "秀和システム", .Telephone = "03-XXXX-XXXX"})
             publishers.Add(New Publisher With {.Id = 2, .Name = "日経BP", .Telephone = "03-XXXX-XXXX"})
+            publishers.Add(New Publisher With {.Id = 3, .Name = "民明書房", .Telephone = "090-XXXX-XXXX"})
 
         End Sub
 
@@ -211,7 +220,7 @@ Namespace Controllers
         End Function
 
 
-        <HttpGet("upload")>
+        <HttpPost("upload")>
         Public Async Function FileUpload(zipfile As IFormFile) As Task(Of IActionResult)
             Dim Path = "sample.zip"
             Using stream = System.IO.File.Create(Path)

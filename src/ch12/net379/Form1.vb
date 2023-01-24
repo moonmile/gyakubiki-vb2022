@@ -6,7 +6,8 @@ Public Class Form1
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
-    Private Async Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Async Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
         Dim Text = TextBox1.Text
         Dim client As New HttpClient()
         Dim ub As New UriBuilder("https://www.google.co.jp/search")

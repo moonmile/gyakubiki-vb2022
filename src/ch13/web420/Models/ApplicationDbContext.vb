@@ -11,6 +11,7 @@ Public Class ApplicationDbContext
     Public Property Book As DbSet(Of Book)
     Public Property Author As DbSet(Of Author)
     Public Property Publisher As DbSet(Of Publisher)
+    Public Property Store As DbSet(Of Store)
 End Class
 
 Partial Public Class Book
@@ -38,3 +39,5 @@ Partial Public Class Publisher
     Public Property Telephone As String
     Public Property Address As String
 End Class
+
+

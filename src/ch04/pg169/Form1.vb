@@ -2,7 +2,8 @@
 
     Private _obj As Sample
 
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub Form1_Load(sender As Object, e As EventArgs) _
+        Handles MyBase.Load
         _obj = New Sample("秀和太郎")
         ' イベントハンドラを追加する
         AddHandler _obj.OnChangedName, AddressOf _obj_OnChangedName

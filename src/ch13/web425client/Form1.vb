@@ -18,7 +18,7 @@ Public Class Form1
             }
         Dim Json = System.Text.Json.JsonSerializer.Serialize(bookUpdate)
         Dim context = New StringContent(Json, System.Text.Encoding.UTF8, "application/json")
-        Dim response = Await client.PostAsync($"{url}/{bookUpdate.Id}", context)
+        Dim response = Await client.PutAsync($"{url}/{bookUpdate.Id}", context)
         TextBox5.Text = Await response.Content.ReadAsStringAsync()
 
     End Sub

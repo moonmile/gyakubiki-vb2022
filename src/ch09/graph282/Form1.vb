@@ -1,5 +1,6 @@
 ﻿Public Class Form1
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
         Dim g = PictureBox1.CreateGraphics()
         Dim cm As New System.Drawing.Imaging.ColorMatrix() With
             {
@@ -20,10 +21,10 @@
         ' 画像を描画する
         Dim image = My.Resources.kazu
         g.DrawImage(
-                image,
-                New Rectangle(0, 0, PictureBox1.Width, PictureBox1.Height),
-                0, 0, image.Width, image.Height,
-                GraphicsUnit.Pixel,
-                ia)
+            image,
+            New Rectangle(0, 0, PictureBox1.Width, PictureBox1.Height),
+            0, 0, image.Width, image.Height,
+            GraphicsUnit.Pixel,
+            ia)
     End Sub
 End Class

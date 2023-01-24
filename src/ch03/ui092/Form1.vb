@@ -1,5 +1,6 @@
 ﻿Public Class Form1
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
         Dim dlg = New SaveFileDialog() With {
                 .Title = "保存先の画像ファイルの選択",
                 .Filter = "画像ファイル(*.jgp)|*.jpg|画像ファイル(*.png)|*.png"

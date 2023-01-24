@@ -1,4 +1,6 @@
-﻿Class MainWindow
+﻿Imports System.ComponentModel
+
+Class MainWindow
 
     Private _vm As New ViewModel
     Private Sub Window_Loaded(sender As Object, e As RoutedEventArgs)
@@ -14,6 +16,8 @@ End Class
 
 Public Class ViewModel
     Inherits Prism.Mvvm.BindableBase
+
+    Public Event PropertyChanged2 As PropertyChangedEventHandler
 
     Private _id = 0
     Private _name = ""

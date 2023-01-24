@@ -1,7 +1,8 @@
 ﻿Public Class Form1
     Private list As New List(Of Sample)()
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
         ' オブジェクトを生成して追加する
         Dim obj As New Sample() With {.Value = "新規生成"}
         list.Add(obj)
@@ -10,7 +11,8 @@
         ListBox1.Items.AddRange(list.ToArray())
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) _
+        Handles Button2.Click
         ' カウンタをリセットして追加
         Sample.Reset()
         Dim obj As New Sample With {.Value = "リセット"}

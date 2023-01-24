@@ -49,7 +49,7 @@ Namespace Controllers
 
         ' GET: Book
         Function Index(Optional id As Integer = 0) As ActionResult
-            Dim book = books.First(Function(t) t.Id = id)
+            Dim book = books.FirstOrDefault(Function(t) t.Id = id)
             If Not book Is Nothing Then
                 book.Author = authors.FirstOrDefault(Function(t) t.Id = book.AuthorId)
                 book.Publisher = publishers.FirstOrDefault(Function(t) t.Id = book.PublisherId)

@@ -9,14 +9,16 @@
 
     Private cards As New List(Of String)()
 
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub Form1_Load(sender As Object, e As EventArgs) _
+        Handles MyBase.Load
         For i = 1 To 20
             cards.Add(GetCard())
         Next
         ListBox1.Items.AddRange(cards.ToArray())
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
         ' マーク順に編集する
         Dim items As New List(Of List(Of String))()
         For Each mark In {"♠", "♥", "♦", "♣"}

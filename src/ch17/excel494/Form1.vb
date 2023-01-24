@@ -1,0 +1,91 @@
+﻿Imports System.ComponentModel.DataAnnotations
+Imports Microsoft.Data.SqlClient
+Imports Microsoft.EntityFrameworkCore
+
+Public Class Form1
+    Private Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
+
+        ' データベースから取得
+        Dim db As New MyContext()
+        Dim items = db.Book.Include("Author").Include("Publisher").ToList()
+        ' Excelに記述
+        Dim path = "sample.xlsx"
+        Using wb = New ClosedXML.Excel.XLWorkbook(path)
+            Dim sh = wb.Worksheets.First()
+            Dim r = 2
+            For Each item In items
+                sh.Cell(r, 1).Value = item.Id
+                sh.Cell(r, 2).Value = item.Title
+                sh.Cell(r, 3).Value = item.Author?.Name
+                sh.Cell(r, 4).Value = item.Publisher?.Name
+                sh.Cell(r, 5).Value = item.Price
+                r += 1
+            Next
+            ' Excelを保存
+            wb.Save()
+        End Using
+        MessageBox.Show("データを取得しました")
+    End Sub
+End Class
+
+''' <summary>
+''' 在庫クラス
+''' </summary>
+Public Class Store
+    <Key>
+    Public Property Id As Integer
+    Public Property BookId As Integer
+    Public Property Stock As Integer
+    Public Property CreatedAt As DateTime
+    Public Property UpdatedAt As DateTime
+End Class
+''' <summary>
+''' 書籍クラス
+''' </summary>
+Public Class Book
+    <Key>
+    Public Property Id As Integer
+    Public Property Title As String
+    Public Property AuthorId As Integer
+    Public Property PublisherId As Integer?
+    Public Property Price As Integer
+
+    Public Property Author As Author
+    Public Property Publisher As Publisher
+End Class
+''' <summary>
+''' 著者クラス
+''' </summary>
+Public Class Author
+    <Key>
+    Public Property Id As Integer
+    Public Property Name As String
+End Class
+''' <summary>
+''' 出版社クラス
+''' </summary>
+Public Class Publisher
+    <Key>
+    Public Property Id As Integer
+    Public Property Name As String
+    Public Property Telephone As String
+    Public Property Address As String
+End Class
+
+Public Class MyContext
+    Inherits DbContext
+    Protected Overrides Sub OnConfiguring(optionsBuilder As DbContextOptionsBuilder)
+        Dim builder = New SqlConnectionStringBuilder()
+        builder.DataSource = "(local)"
+        builder.InitialCatalog = "sampledb"
+        builder.IntegratedSecurity = True
+        optionsBuilder.UseSqlServer(builder.ConnectionString)
+    End Sub
+    Public Property Store As DbSet(Of Store)
+    Public Property Book As DbSet(Of Book)
+    Public Property Author As DbSet(Of Author)
+    Public Property Publisher As DbSet(Of Publisher)
+End Class
+
+

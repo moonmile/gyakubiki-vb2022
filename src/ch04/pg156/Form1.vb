@@ -12,7 +12,8 @@
         ans2 = x * y
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
         Dim x = 10
         Dim y = 20
         Dim ans1 As Integer, ans2 As Integer
@@ -22,7 +23,8 @@
         Label3.Text = $"ans2 = {ans2}"
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) _
+        Handles Button2.Click
         Dim x = 10
         Dim y = 20
         Dim o As New Calc()

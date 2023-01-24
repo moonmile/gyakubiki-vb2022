@@ -1,7 +1,8 @@
 ﻿Imports System.IO
 
 Public Class Form1
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
         Dim dir = System.Environment.GetFolderPath(Environment.SpecialFolder.MyPictures)
         Dim dirinfo = New DirectoryInfo(dir)
         Dim files = dirinfo.GetFiles("*.jpg")

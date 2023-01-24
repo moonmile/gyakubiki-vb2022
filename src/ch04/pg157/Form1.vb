@@ -6,7 +6,8 @@
         prev = prev.AddYears(-10)
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
         ' ref で渡す場合は、あらかじめ初期化しておく
         Dim nx = DateTime.Now
         Dim prev = DateTime.Now
@@ -15,7 +16,8 @@
         Label3.Text = $"10年前 : {prev}"
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) _
+        Handles Button2.Click
         ' クラスを利用してプロパティで返す
         Dim dt As New CalcDate With
             {

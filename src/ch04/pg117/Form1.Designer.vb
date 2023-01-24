@@ -58,9 +58,9 @@ Partial Class Form1
         Me.label1.AutoSize = True
         Me.label1.Location = New System.Drawing.Point(24, 46)
         Me.label1.Name = "label1"
-        Me.label1.Size = New System.Drawing.Size(126, 25)
+        Me.label1.Size = New System.Drawing.Size(103, 25)
         Me.label1.TabIndex = 4
-        Me.label1.Text = "??演算子を使う"
+        Me.label1.Text = "If関数を使う"
         '
         'Form1
         '

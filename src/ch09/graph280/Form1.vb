@@ -1,5 +1,6 @@
 ﻿Public Class Form1
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
         Dim g = PictureBox1.CreateGraphics()
         ' グラデーションを作成
         Dim br As New System.Drawing.Drawing2D.LinearGradientBrush(

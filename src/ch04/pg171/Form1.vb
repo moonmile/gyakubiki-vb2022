@@ -1,5 +1,6 @@
 ﻿Public Class Form1
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
         ' インスタンスの生成と同時にプロパティに値を設定
         Dim obj As New Sample With {
             .Name = "マスダトモアキ",
@@ -11,7 +12,8 @@
         Label6.Text = obj.Address
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) _
+        Handles Button2.Click
         ' コンストラクタを使って初期化
         Dim obj As New Sample(
             "マスダトモアキ", 53, "東京都")
@@ -20,7 +22,8 @@
         Label6.Text = obj.Address
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs) _
+        Handles Button3.Click
         ' コンストラクタで変数名を指定する
         Dim obj As New Sample(
             name:="マスダトモアキ",

@@ -4,7 +4,8 @@
     Const APPLI = "Visual Basic 2022 逆引き大全"
     Const TIPS = 500
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) _
+        Handles Button1.Click
         ' メソッド内の定数
         Const STR = "の極意"
 

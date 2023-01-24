@@ -104,7 +104,7 @@ Partial Class Form1
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(354, 31)
         Me.TextBox1.TabIndex = 7
-        Me.TextBox1.Text = "https://localhost:5001/api/Books/update"
+        Me.TextBox1.Text = "https://localhost:5001/api/Books"
         '
         'Form1
         '

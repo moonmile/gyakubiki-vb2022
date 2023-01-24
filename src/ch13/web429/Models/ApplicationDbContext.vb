@@ -45,9 +45,9 @@ End Class
 ''' </summary>
 Public Class Store
     <Key>
-    Public Id As Integer
-    Public BookId As Integer
-    Public Stock As Integer
-    Public CreatedAt As DateTime
-    Public UpdatedAt As DateTime
+    Public Property Id As Integer
+    Public Property BookId As Integer
+    Public Property Stock As Integer
+    Public Property CreatedAt As DateTime
+    Public Property UpdatedAt As DateTime
 End Class

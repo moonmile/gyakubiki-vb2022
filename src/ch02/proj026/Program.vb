@@ -7,5 +7,4 @@
         Application.SetCompatibleTextRenderingDefault(False)
         Application.Run(New Form2)
     End Sub
-
 End Module

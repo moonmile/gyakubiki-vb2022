@@ -33,31 +33,32 @@ Public Class BooksController
         Return Book
     End Function
 
-    ' PUT api/Books/5
-    <HttpPut("{id}")>
-    Public Async Function PutBook(id As Integer, book As Book) As Task(Of IActionResult)
-        If id <> book.Id Then
-            Return BadRequest()
-        End If
-        _context.Entry(book).State = EntityState.Modified
-        Try
-            Await _context.SaveChangesAsync()
-        Catch ex As DbUpdateConcurrencyException
-            If Not BookExists(id) Then
-                Return NotFound()
-            Else
-                Throw
-            End If
-        End Try
-        Return NoContent()
-    End Function
+    '' PUT api/Books/5
+    '<HttpPut("{id}")>
+    'Public Async Function PutBook(id As Integer, book As Book) As Task(Of IActionResult)
+    '    If id <> book.Id Then
+    '        Return BadRequest()
+    '    End If
+    '    _context.Entry(book).State = EntityState.Modified
+    '    Try
+    '        Await _context.SaveChangesAsync()
+    '    Catch ex As DbUpdateConcurrencyException
+    '        If Not BookExists(id) Then
+    '            Return NotFound()
+    '        Else
+    '            Throw
+    '        End If
+    '    End Try
+    '    Return NoContent()
+    'End Function
 
     ' POST: api/Books
     <HttpPost>
     Public Async Function PostBook(Book As Book) As Task(Of ActionResult(Of Book))
         _context.Book.Add(Book)
         Await _context.SaveChangesAsync()
-        Return CreatedAtAction("GetBook", New With {.id = Book.Id}, Book)
+        Return Await GetBook(Book.Id)
+        ' Return CreatedAtAction("GetBook", New With {.id = Book.Id}, Book)
 
     End Function
 
@@ -78,6 +79,7 @@ Public Class BooksController
         Return _context.Book.Any(Function(e) e.Id = id)
     End Function
 
+    <HttpPut("{id}")>
     Public Async Function UpdateBook(id As Integer, bookupdate As BookUpdate) As Task(Of ActionResult(Of Book))
         If id <> bookupdate.Id Then
             Return BadRequest()
@@ -91,7 +93,7 @@ Public Class BooksController
         Await _context.SaveChangesAsync()
         Dim item = Await _context.Book.
         Include("Author").
-            Include("Publisher").
+        Include("Publisher").
         FirstOrDefaultAsync(Function(t) t.Id = id)
         If item Is Nothing Then
             Return NotFound()
