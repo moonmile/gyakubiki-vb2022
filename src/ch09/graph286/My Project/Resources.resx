@@ -119,19 +119,19 @@
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="cock001" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\..\gyakubiki-vcs2022\src\ch09\graph286\Resources\cock001.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\cock001.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cock002" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\..\gyakubiki-vcs2022\src\ch09\graph286\Resources\cock002.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\cock002.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cock003" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\..\gyakubiki-vcs2022\src\ch09\graph286\Resources\cock003.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\cock003.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cock004" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\..\gyakubiki-vcs2022\src\ch09\graph286\Resources\cock004.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\cock004.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cock005" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\..\gyakubiki-vcs2022\src\ch09\graph286\Resources\cock006.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\cock005.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cocks" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cocks.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
